@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "backend": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1702952199,
+        "narHash": "sha256-OW19Eq3kkVfMgRHAbabLdwoM9fcvzI7RR819gwO0ny8=",
+        "owner": "TeamPiped",
+        "repo": "Piped-Backend",
+        "rev": "c746794d7434d0cda99f8b586a431ef69e1fb7b5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "TeamPiped",
+        "repo": "Piped-Backend",
+        "type": "github"
+      }
+    },
     "flake-utils": {
       "inputs": {
         "systems": "systems"
@@ -103,6 +119,7 @@
     },
     "root": {
       "inputs": {
+        "backend": "backend",
         "frontend": "frontend",
         "nixpkgs": "nixpkgs",
         "pnpm2nix": "pnpm2nix",
