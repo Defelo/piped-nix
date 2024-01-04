@@ -1,6 +1,11 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.11";
+    pnpm2nix.url = "github:nzbr/pnpm2nix-nzbr";
+    frontend = {
+      url = "github:TeamPiped/Piped";
+      flake = false;
+    };
     proxy = {
       url = "github:TeamPiped/piped-proxy";
       flake = false;
@@ -10,6 +15,8 @@
   outputs = {
     self,
     nixpkgs,
+    pnpm2nix,
+    frontend,
     proxy,
     ...
   }: let
@@ -25,7 +32,10 @@
     packages = eachDefaultSystem (system: let
       pkgs = import nixpkgs {inherit system;};
     in {
-      frontend = {};
+      frontend = pnpm2nix.packages.${system}.mkPnpmPackage {
+        name = "piped-frontend";
+        src = frontend;
+      };
       backend = {};
       proxy = pkgs.rustPlatform.buildRustPackage {
         name = "piped-proxy";
@@ -43,6 +53,12 @@
       options.services.piped = with lib; {
         enable = mkEnableOption "piped";
 
+        frontend.domain = mkOption {
+          type = types.str;
+        };
+        backend.domain = mkOption {
+          type = types.str;
+        };
         proxy.domain = mkOption {
           type = types.str;
         };
@@ -84,6 +100,15 @@
           services.nginx = {
             enable = true;
             virtualHosts = {
+              ${cfg.frontend.domain} = {
+                root = pkgs.runCommand "piped-frontend-patched" {} ''
+                  cp -r ${self.packages.${pkgs.system}.frontend} $out
+                  chmod -R +w $out
+                  ${pkgs.gnused}/bin/sed -i s/pipedapi.kavin.rocks/${cfg.backend.domain}/g $out/{opensearch.xml,assets/*}
+                '';
+                locations."/".tryFiles = "$uri /index.html";
+              };
+
               ${cfg.proxy.domain} = let
                 conf = ''
                   proxy_buffering on;
