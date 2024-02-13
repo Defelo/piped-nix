@@ -83,14 +83,11 @@
       options.services.piped = with lib; {
         enable = mkEnableOption "piped";
 
-        frontend.domain = mkOption {
+        domain = mkOption {
           type = types.str;
         };
 
         backend = {
-          domain = mkOption {
-            type = types.str;
-          };
           port = mkOption {
             type = types.port;
           };
@@ -122,15 +119,6 @@
             };
           };
         };
-
-        proxy.domain = mkOption {
-          type = types.str;
-        };
-
-        defaultNginxConfig = mkOption {
-          type = types.attrsOf types.anything;
-          default = {};
-        };
       };
 
       config = let
@@ -140,9 +128,9 @@
           services.piped.backend.settings = {
             PORT = toString cfg.backend.port;
             HTTP_WORKERS = lib.mkDefault "2";
-            PROXY_PART = "https://${cfg.proxy.domain}";
-            API_URL = "https://${cfg.backend.domain}";
-            FRONTEND_URL = "https://${cfg.frontend.domain}";
+            PROXY_PART = "https://${cfg.domain}/proxy";
+            API_URL = "https://${cfg.domain}/api";
+            FRONTEND_URL = "https://${cfg.domain}";
             COMPROMISED_PASSWORD_CHECK = lib.mkDefault "true";
             DISABLE_REGISTRATION = lib.mkDefault "true";
             FEED_RETENTION = lib.mkDefault "30";
@@ -223,76 +211,68 @@
             enable = true;
             appendHttpConfig = ''
               proxy_cache_path /tmp/pipedapi_cache levels=1:2 keys_zone=pipedapi:4m max_size=2g inactive=60m use_temp_path=off;
+              upstream pipedproxy {
+                server unix:/run/piped-proxy/actix.sock;
+              }
+              map $request_uri $pipedproxy_cache {
+                default "public, max-age=604800";
+                ~^/proxy(/videoplayback|/api/v4/|/api/manifest/) "private always";
+              }
             '';
-            virtualHosts = {
-              ${cfg.frontend.domain} = lib.mkMerge [
-                cfg.defaultNginxConfig
-                {
+            virtualHosts = let
+              conf = ''
+                proxy_buffering on;
+                proxy_buffers 1024 16k;
+                proxy_set_header X-Forwarded-For "";
+                proxy_set_header CF-Connecting-IP "";
+                proxy_hide_header "alt-svc";
+                sendfile on;
+                sendfile_max_chunk 512k;
+                tcp_nopush on;
+                aio threads=default;
+                aio_write on;
+                directio 16m;
+                proxy_hide_header Cache-Control;
+                proxy_hide_header etag;
+                proxy_http_version 1.1;
+                proxy_set_header Connection keep-alive;
+                proxy_max_temp_file_size 32m;
+                access_log off;
+              '';
+            in {
+              ${cfg.domain} = {
+                locations."/" = {
                   root = pkgs.runCommand "piped-frontend-patched" {} ''
                     cp -r ${self.packages.${pkgs.system}.frontend} $out
                     chmod -R +w $out
-                    ${pkgs.gnused}/bin/sed -i s/pipedapi.kavin.rocks/${cfg.backend.domain}/g $out/{opensearch.xml,assets/*}
+                    ${pkgs.gnused}/bin/sed -i 's|pipedapi.kavin.rocks|${cfg.domain}/api|g' $out/{opensearch.xml,assets/*}
                   '';
-                  locations."/".tryFiles = "$uri /index.html";
-                }
-              ];
+                  tryFiles = "$uri /index.html";
+                };
 
-              ${cfg.backend.domain} = lib.mkMerge [
-                cfg.defaultNginxConfig
-                {
-                  locations."/" = {
-                    proxyPass = "http://127.0.0.1:${toString cfg.backend.port}";
-                    proxyWebsockets = true;
-                    extraConfig = ''
-                      proxy_cache pipedapi;
-                    '';
-                  };
-                  locations."/webhooks/pubsub" = {
-                    proxyPass = "http://127.0.0.1:${toString cfg.backend.port}";
-                    proxyWebsockets = true;
-                    extraConfig = ''
-                      proxy_cache pipedapi;
-                      allow all;
-                    '';
-                  };
-                }
-              ];
+                locations."/api/" = {
+                  proxyPass = "http://127.0.0.1:${toString cfg.backend.port}/";
+                  proxyWebsockets = true;
+                  extraConfig = ''
+                    proxy_cache pipedapi;
+                  '';
+                };
 
-              ${cfg.proxy.domain} = let
-                conf = ''
-                  proxy_buffering on;
-                  proxy_buffers 1024 16k;
-                  proxy_set_header X-Forwarded-For "";
-                  proxy_set_header CF-Connecting-IP "";
-                  proxy_hide_header "alt-svc";
-                  sendfile on;
-                  sendfile_max_chunk 512k;
-                  tcp_nopush on;
-                  aio threads=default;
-                  aio_write on;
-                  directio 16m;
-                  proxy_hide_header Cache-Control;
-                  proxy_hide_header etag;
-                  proxy_http_version 1.1;
-                  proxy_set_header Connection keep-alive;
-                  proxy_max_temp_file_size 32m;
-                  access_log off;
-                  proxy_pass http://unix:/run/piped-proxy/actix.sock;
+                locations."/api/webhooks/pubsub/" = {
+                  proxyPass = "http://127.0.0.1:${toString cfg.backend.port}/webhooks/pubsub/";
+                  proxyWebsockets = true;
+                  extraConfig = ''
+                    proxy_cache pipedapi;
+                    allow all;
+                  '';
+                };
+
+                locations."/proxy/".extraConfig = ''
+                  ${conf}
+                  more_set_headers "Cache-Control: $pipedproxy_cache";
+                  proxy_pass http://pipedproxy/;
                 '';
-              in
-                lib.mkMerge [
-                  cfg.defaultNginxConfig
-                  {
-                    locations."~ (/videoplayback|/api/v4/|/api/manifest/)".extraConfig = ''
-                      ${conf}
-                      more_set_headers "Cache-Control: private always";
-                    '';
-                    locations."/".extraConfig = ''
-                      ${conf}
-                      more_set_headers "Cache-Control: public, max-age=604800";
-                    '';
-                  }
-                ];
+              };
             };
           };
         };
