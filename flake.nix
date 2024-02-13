@@ -33,20 +33,28 @@
       "x86_64-linux"
     ];
     eachDefaultSystem = lib.genAttrs defaultSystems;
+    version = input: builtins.concatStringsSep "-" (builtins.match "(.{4})(.{2})(.{2}).*" input.lastModifiedDate);
   in {
     packages = eachDefaultSystem (system: let
       pkgs = import nixpkgs {inherit system;};
     in {
       frontend = pnpm2nix.packages.${system}.mkPnpmPackage {
-        name = "piped-frontend";
+        pname = "piped-frontend";
+        version = version frontend;
         src = frontend;
       };
-      backend = pkgs.writeShellScriptBin "piped-backend" ''
-        MAX_MEMORY=''${MAX_MEMORY:-1G}
-        ${pkgs.jdk21}/bin/java -server -Xmx"$MAX_MEMORY" -XX:+UnlockExperimentalVMOptions -XX:+HeapDumpOnOutOfMemoryError -XX:+OptimizeStringConcat -XX:+UseStringDeduplication -XX:+UseCompressedOops -XX:+UseNUMA -XX:+UseG1GC -jar ${./backend.jar}
-      '';
+      backend =
+        lib.overrideDerivation (pkgs.writeShellScriptBin "piped-backend" ''
+          MAX_MEMORY=''${MAX_MEMORY:-1G}
+          ${pkgs.jdk21}/bin/java -server -Xmx"$MAX_MEMORY" -XX:+UnlockExperimentalVMOptions -XX:+HeapDumpOnOutOfMemoryError -XX:+OptimizeStringConcat -XX:+UseStringDeduplication -XX:+UseCompressedOops -XX:+UseNUMA -XX:+UseG1GC -jar ${./backend.jar}
+        '') (_: {
+          pname = "piped-backend";
+          version = version backend;
+          name = "piped-backend-${version backend}";
+        });
       proxy = pkgs.rustPlatform.buildRustPackage {
-        name = "piped-proxy";
+        pname = "piped-proxy";
+        version = version proxy;
         src = proxy;
         cargoLock.lockFile = "${proxy}/Cargo.lock";
       };
