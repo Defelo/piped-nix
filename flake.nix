@@ -258,6 +258,14 @@
                   '';
                 };
 
+                locations."= /api/webhooks/pubsub" = {
+                  proxyPass = "http://127.0.0.1:${toString cfg.backend.port}/webhooks/pubsub";
+                  proxyWebsockets = true;
+                  extraConfig = ''
+                    proxy_cache pipedapi;
+                    allow all;
+                  '';
+                };
                 locations."/api/webhooks/pubsub/" = {
                   proxyPass = "http://127.0.0.1:${toString cfg.backend.port}/webhooks/pubsub/";
                   proxyWebsockets = true;
