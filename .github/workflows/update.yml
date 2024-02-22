@@ -1,0 +1,31 @@
+name: update
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    name: update
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Nix
+        uses: DeterminateSystems/nix-installer-action@v9
+      - name: Configure git
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+      - name: Update flake.lock
+        run: nix flake update --commit-lock-file
+      - name: Update backend
+        run: |
+          env -i $(which nix) run .#buildBackend
+          git add backend.jar
+          git commit --amend --no-edit
+      - name: Push
+        run: git push
