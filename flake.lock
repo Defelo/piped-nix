@@ -37,11 +37,11 @@
     "frontend": {
       "flake": false,
       "locked": {
-        "lastModified": 1710539816,
-        "narHash": "sha256-oKpg5r3gHQC9qIkGPDbnXrjMZRAoS2OUfNA5hbyh8U4=",
+        "lastModified": 1710630197,
+        "narHash": "sha256-WY+03jaeh1pnFo86q78Bf9nEWVVJNGP/9imgq5dsLYo=",
         "owner": "TeamPiped",
         "repo": "Piped",
-        "rev": "f54c46d44475e208d5ca6ffa4925b0a28f6b43ac",
+        "rev": "d4f0a6e4c8fd88bd1962a4521f483198af1234e5",
         "type": "github"
       },
       "original": {
