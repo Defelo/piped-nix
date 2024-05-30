@@ -21,11 +21,21 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
       - name: Update flake.lock
-        run: nix flake update --commit-lock-file
-      - name: Update backend
+        id: update
+        run: |
+          nix flake update --commit-lock-file
+          if [[ "$(git rev-parse origin/main)" != "$(git rev-parse main)" ]]; then
+            updated=1
+          else
+            updated=0
+          fi
+          echo "updated=$updated" >> "$GITHUB_OUTPUT"
+      - name: Build backend
+        if: steps.update.outputs.updated == '1'
         run: |
           env -i $(which nix) run .#buildBackend
           git add backend.jar
           git commit --amend --no-edit
       - name: Push
+        if: steps.update.outputs.updated == '1'
         run: git push
