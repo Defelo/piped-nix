@@ -2,6 +2,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.11";
     pnpm2nix.url = "github:nzbr/pnpm2nix-nzbr";
+    gradle2nix.url = "github:tadfisher/gradle2nix/v2";
     frontend = {
       url = "github:TeamPiped/Piped";
       flake = false;
@@ -20,6 +21,7 @@
     self,
     nixpkgs,
     pnpm2nix,
+    gradle2nix,
     frontend,
     backend,
     proxy,
@@ -43,10 +45,21 @@
         version = version frontend;
         src = frontend;
       };
-      backend =
+      backend = let
+        jar = gradle2nix.builders.${system}.buildGradlePackage {
+          pname = "piped-backend-jar";
+          version = version backend;
+          src = backend;
+          lockFile = ./backend-gradle.lock;
+          gradleFlags = ["shadowJar"];
+          installPhase = ''
+            cp build/libs/*.jar $out
+          '';
+        };
+      in
         lib.overrideDerivation (pkgs.writeShellScriptBin "piped-backend" ''
           MAX_MEMORY=''${MAX_MEMORY:-1G}
-          ${pkgs.jdk21}/bin/java -server -Xmx"$MAX_MEMORY" -XX:+UnlockExperimentalVMOptions -XX:+HeapDumpOnOutOfMemoryError -XX:+OptimizeStringConcat -XX:+UseStringDeduplication -XX:+UseCompressedOops -XX:+UseNUMA -XX:+UseG1GC -jar ${./backend.jar}
+          ${pkgs.jdk21}/bin/java -server -Xmx"$MAX_MEMORY" -XX:+UnlockExperimentalVMOptions -XX:+HeapDumpOnOutOfMemoryError -XX:+OptimizeStringConcat -XX:+UseStringDeduplication -XX:+UseCompressedOops -XX:+UseNUMA -XX:+UseG1GC -jar ${jar}
         '') (_: {
           pname = "piped-backend";
           version = version backend;
@@ -59,18 +72,18 @@
         cargoLock.lockFile = "${proxy}/Cargo.lock";
       };
 
-      buildBackend = pkgs.writeShellScriptBin "build-piped-backend" ''
+      lockBackend = pkgs.writeShellScriptBin "lock-piped-backend" ''
         set -ex
-        export PATH=${lib.makeBinPath (with pkgs; [coreutils findutils gnused jdk21])}
+        export PATH=${lib.makeBinPath ([gradle2nix.packages.${system}.default] ++ (with pkgs; [coreutils findutils gnused jdk21]))}
         tmp=$(mktemp -d)
         trap "rm -rf $tmp" EXIT TERM ERR
         cp -r ${backend} $tmp/backend
         chmod -R +w $tmp
         pushd $tmp/backend
         export GRADLE_USER_HOME=$tmp/.gradle-home
-        ./gradlew --no-daemon shadowJar
+        gradle2nix -t shadowJar
         popd
-        cp $tmp/backend/build/libs/*.jar backend.jar
+        cp $tmp/backend/gradle.lock backend-gradle.lock
       '';
     });
 

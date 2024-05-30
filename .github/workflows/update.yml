@@ -30,11 +30,11 @@ jobs:
             updated=0
           fi
           echo "updated=$updated" >> "$GITHUB_OUTPUT"
-      - name: Build backend
+      - name: Lock backend
         if: steps.update.outputs.updated == '1'
         run: |
-          env -i $(which nix) run .#buildBackend
-          git add backend.jar
+          env -i $(which nix) run .#lockBackend
+          git add backend-gradle.lock
           git commit --amend --no-edit
       - name: Push
         if: steps.update.outputs.updated == '1'
