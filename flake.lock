@@ -74,11 +74,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1717114617,
-        "narHash": "sha256-zYYnEIpJAST9tm7A58FG+XOuKEDnH8WUGKcXfsTCsoM=",
+        "lastModified": 1717532589,
+        "narHash": "sha256-9k8ff85eIpoVP/JJ7/mUaNEsRwVlecPnGylraAbRqbM=",
         "owner": "tadfisher",
         "repo": "gradle2nix",
-        "rev": "a9353317959b7627a5754c6863e58231988f548a",
+        "rev": "95c758b11cb393ed5ad478c6bbebf7b7fbf6889b",
         "type": "github"
       },
       "original": {
