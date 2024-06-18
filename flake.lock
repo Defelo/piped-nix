@@ -106,11 +106,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1718229064,
-        "narHash": "sha256-ZFav8A9zPNfjZg/wrxh1uZeMJHELRfRgFP+meq01XYk=",
+        "lastModified": 1718447546,
+        "narHash": "sha256-JHuXsrC9pr4kA4n7LuuPfWFJUVlDBVJ1TXDVpHEuUgM=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "5c2ec3a5c2ee9909904f860dadc19bc12cd9cc44",
+        "rev": "842253bf992c3a7157b67600c2857193f126563a",
         "type": "github"
       },
       "original": {
@@ -158,11 +158,11 @@
     "proxy": {
       "flake": false,
       "locked": {
-        "lastModified": 1718552502,
-        "narHash": "sha256-UTEDCHFDIxr84OrWzZuNouGy47YfpAc6rjg8aPVjv1M=",
+        "lastModified": 1718652321,
+        "narHash": "sha256-MihwDJwKy0szpKVsVMm2N7WAyd+6hEmbnl/XQx3VqnM=",
         "owner": "TeamPiped",
         "repo": "piped-proxy",
-        "rev": "588a48c5ca7bfdb9667d63f90cb839ad299347e4",
+        "rev": "7deb4175e3ea06b2fdf1359be94413f30a74f206",
         "type": "github"
       },
       "original": {
