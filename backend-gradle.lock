@@ -139,46 +139,46 @@
       "hash": "sha256-qLqk1QoXus0KIkcczmbI290QF3qe4fJ69+y/qZ/bS9k="
     }
   },
-  "com.github.FireMasterK.NewPipeExtractor:NewPipeExtractor:fcb1d28f5b7c5c2dd74f54b047c4978cc672a66c": {
-    "NewPipeExtractor-fcb1d28f5b7c5c2dd74f54b047c4978cc672a66c.jar": {
-      "url": "https://jitpack.io/com/github/FireMasterK/NewPipeExtractor/NewPipeExtractor/fcb1d28f5b7c5c2dd74f54b047c4978cc672a66c/NewPipeExtractor-fcb1d28f5b7c5c2dd74f54b047c4978cc672a66c.jar",
-      "hash": "sha256-K6awAV/1Jvp1UJtx8lMTYFY5znj09lP56mHL5yAcH7c="
+  "com.github.FireMasterK.NewPipeExtractor:NewPipeExtractor:d486c3f4220c5b3fd045e614cd1662cdee437d13": {
+    "NewPipeExtractor-d486c3f4220c5b3fd045e614cd1662cdee437d13.jar": {
+      "url": "https://jitpack.io/com/github/FireMasterK/NewPipeExtractor/NewPipeExtractor/d486c3f4220c5b3fd045e614cd1662cdee437d13/NewPipeExtractor-d486c3f4220c5b3fd045e614cd1662cdee437d13.jar",
+      "hash": "sha256-dTExv+kaSWF7pM7thd7xODqAPlapS3+AoXJ40J4kdDo="
     },
-    "NewPipeExtractor-fcb1d28f5b7c5c2dd74f54b047c4978cc672a66c.module": {
-      "url": "https://jitpack.io/com/github/FireMasterK/NewPipeExtractor/NewPipeExtractor/fcb1d28f5b7c5c2dd74f54b047c4978cc672a66c/NewPipeExtractor-fcb1d28f5b7c5c2dd74f54b047c4978cc672a66c.module",
-      "hash": "sha256-GyZ6EM9jZRRg8fCplHKxB1T0R04f9U/LZeLc4w8iuvc="
+    "NewPipeExtractor-d486c3f4220c5b3fd045e614cd1662cdee437d13.module": {
+      "url": "https://jitpack.io/com/github/FireMasterK/NewPipeExtractor/NewPipeExtractor/d486c3f4220c5b3fd045e614cd1662cdee437d13/NewPipeExtractor-d486c3f4220c5b3fd045e614cd1662cdee437d13.module",
+      "hash": "sha256-nBHI9TSgggwmFf6qO9SVmgMtil4rkfe9zyzdTApeNOM="
     },
-    "NewPipeExtractor-fcb1d28f5b7c5c2dd74f54b047c4978cc672a66c.pom": {
-      "url": "https://jitpack.io/com/github/FireMasterK/NewPipeExtractor/NewPipeExtractor/fcb1d28f5b7c5c2dd74f54b047c4978cc672a66c/NewPipeExtractor-fcb1d28f5b7c5c2dd74f54b047c4978cc672a66c.pom",
-      "hash": "sha256-nKbpZ2Z5GL+wetBzpOCQfUjOEWqcxECKEmhuM28bGJo="
+    "NewPipeExtractor-d486c3f4220c5b3fd045e614cd1662cdee437d13.pom": {
+      "url": "https://jitpack.io/com/github/FireMasterK/NewPipeExtractor/NewPipeExtractor/d486c3f4220c5b3fd045e614cd1662cdee437d13/NewPipeExtractor-d486c3f4220c5b3fd045e614cd1662cdee437d13.pom",
+      "hash": "sha256-b7zjJPTJLMGpmMz/j3x6X+r/RY0+W/bnHwlfOA6LHUY="
     }
   },
-  "com.github.FireMasterK.NewPipeExtractor:extractor:fcb1d28f5b7c5c2dd74f54b047c4978cc672a66c": {
-    "extractor-fcb1d28f5b7c5c2dd74f54b047c4978cc672a66c.jar": {
-      "url": "https://jitpack.io/com/github/FireMasterK/NewPipeExtractor/extractor/fcb1d28f5b7c5c2dd74f54b047c4978cc672a66c/extractor-fcb1d28f5b7c5c2dd74f54b047c4978cc672a66c.jar",
-      "hash": "sha256-zVwcGHqt3yxAdg1lUMXAFQB5e2dl62gAqiJtLLls9qs="
+  "com.github.FireMasterK.NewPipeExtractor:extractor:d486c3f4220c5b3fd045e614cd1662cdee437d13": {
+    "extractor-d486c3f4220c5b3fd045e614cd1662cdee437d13.jar": {
+      "url": "https://jitpack.io/com/github/FireMasterK/NewPipeExtractor/extractor/d486c3f4220c5b3fd045e614cd1662cdee437d13/extractor-d486c3f4220c5b3fd045e614cd1662cdee437d13.jar",
+      "hash": "sha256-yrADhHUOZjuENbNBEWCX3L/r6lKKxJMEZKSWBc43rbA="
     },
-    "extractor-fcb1d28f5b7c5c2dd74f54b047c4978cc672a66c.module": {
-      "url": "https://jitpack.io/com/github/FireMasterK/NewPipeExtractor/extractor/fcb1d28f5b7c5c2dd74f54b047c4978cc672a66c/extractor-fcb1d28f5b7c5c2dd74f54b047c4978cc672a66c.module",
-      "hash": "sha256-7Xo/mQjgKkxI0XJYulJa+YVNkGEJMosZoNO1EmnTwCE="
+    "extractor-d486c3f4220c5b3fd045e614cd1662cdee437d13.module": {
+      "url": "https://jitpack.io/com/github/FireMasterK/NewPipeExtractor/extractor/d486c3f4220c5b3fd045e614cd1662cdee437d13/extractor-d486c3f4220c5b3fd045e614cd1662cdee437d13.module",
+      "hash": "sha256-TCVrfmfBUziBrYGoI51JpSBlP5IRi8lchT/Uo+c+qgU="
     },
-    "extractor-fcb1d28f5b7c5c2dd74f54b047c4978cc672a66c.pom": {
-      "url": "https://jitpack.io/com/github/FireMasterK/NewPipeExtractor/extractor/fcb1d28f5b7c5c2dd74f54b047c4978cc672a66c/extractor-fcb1d28f5b7c5c2dd74f54b047c4978cc672a66c.pom",
-      "hash": "sha256-Bk68PLSIBJljmTFuFhaanNdNLMJ5LMCeAdexFGS0B0c="
+    "extractor-d486c3f4220c5b3fd045e614cd1662cdee437d13.pom": {
+      "url": "https://jitpack.io/com/github/FireMasterK/NewPipeExtractor/extractor/d486c3f4220c5b3fd045e614cd1662cdee437d13/extractor-d486c3f4220c5b3fd045e614cd1662cdee437d13.pom",
+      "hash": "sha256-g3JdaJVP8fh1x9CI6hYr8jpHIYrB4ukmsq/LbmkajAQ="
     }
   },
-  "com.github.FireMasterK.NewPipeExtractor:timeago-parser:fcb1d28f5b7c5c2dd74f54b047c4978cc672a66c": {
-    "timeago-parser-fcb1d28f5b7c5c2dd74f54b047c4978cc672a66c.jar": {
-      "url": "https://jitpack.io/com/github/FireMasterK/NewPipeExtractor/timeago-parser/fcb1d28f5b7c5c2dd74f54b047c4978cc672a66c/timeago-parser-fcb1d28f5b7c5c2dd74f54b047c4978cc672a66c.jar",
-      "hash": "sha256-4q+OrTq0hpAdEI/P42CYIb56prRyruSB21iL6jDoSOU="
+  "com.github.FireMasterK.NewPipeExtractor:timeago-parser:d486c3f4220c5b3fd045e614cd1662cdee437d13": {
+    "timeago-parser-d486c3f4220c5b3fd045e614cd1662cdee437d13.jar": {
+      "url": "https://jitpack.io/com/github/FireMasterK/NewPipeExtractor/timeago-parser/d486c3f4220c5b3fd045e614cd1662cdee437d13/timeago-parser-d486c3f4220c5b3fd045e614cd1662cdee437d13.jar",
+      "hash": "sha256-+28NlBkeukrMHRocdbei+XZN/guPTa1Wpn/CHvGYNws="
     },
-    "timeago-parser-fcb1d28f5b7c5c2dd74f54b047c4978cc672a66c.module": {
-      "url": "https://jitpack.io/com/github/FireMasterK/NewPipeExtractor/timeago-parser/fcb1d28f5b7c5c2dd74f54b047c4978cc672a66c/timeago-parser-fcb1d28f5b7c5c2dd74f54b047c4978cc672a66c.module",
-      "hash": "sha256-IardecRhoEeyNzcv/W5OnSYq3DKN8YNW83dc/zFlncc="
+    "timeago-parser-d486c3f4220c5b3fd045e614cd1662cdee437d13.module": {
+      "url": "https://jitpack.io/com/github/FireMasterK/NewPipeExtractor/timeago-parser/d486c3f4220c5b3fd045e614cd1662cdee437d13/timeago-parser-d486c3f4220c5b3fd045e614cd1662cdee437d13.module",
+      "hash": "sha256-UraM5n3aoUEgvsDemGAY761XCtuYpEpSWRv3hDHDofE="
     },
-    "timeago-parser-fcb1d28f5b7c5c2dd74f54b047c4978cc672a66c.pom": {
-      "url": "https://jitpack.io/com/github/FireMasterK/NewPipeExtractor/timeago-parser/fcb1d28f5b7c5c2dd74f54b047c4978cc672a66c/timeago-parser-fcb1d28f5b7c5c2dd74f54b047c4978cc672a66c.pom",
-      "hash": "sha256-DbiV8RC9lJtX9QIu87STnxgJy8SURqjo9YnEzX9GL64="
+    "timeago-parser-d486c3f4220c5b3fd045e614cd1662cdee437d13.pom": {
+      "url": "https://jitpack.io/com/github/FireMasterK/NewPipeExtractor/timeago-parser/d486c3f4220c5b3fd045e614cd1662cdee437d13/timeago-parser-d486c3f4220c5b3fd045e614cd1662cdee437d13.pom",
+      "hash": "sha256-IR2wRvQkTAyIP/Dbq8CVA3TZZMPfcwI83Ji9MnTMHNc="
     }
   },
   "com.github.johnrengelman:shadow:8.1.1": {
@@ -201,18 +201,18 @@
       "hash": "sha256-PLOIa5ffbgZvEIwxayGfJiyXw8st9tp4kn5kXetkPLA="
     }
   },
-  "com.github.spotbugs:spotbugs-annotations:4.8.3": {
-    "spotbugs-annotations-4.8.3.jar": {
-      "url": "https://repo.maven.apache.org/maven2/com/github/spotbugs/spotbugs-annotations/4.8.3/spotbugs-annotations-4.8.3.jar",
-      "hash": "sha256-5dT2C+jldZV2a6fx1FNdxGrr+Y2uBeFjcqTUEg0+u2s="
+  "com.github.spotbugs:spotbugs-annotations:4.8.6": {
+    "spotbugs-annotations-4.8.6.jar": {
+      "url": "https://repo.maven.apache.org/maven2/com/github/spotbugs/spotbugs-annotations/4.8.6/spotbugs-annotations-4.8.6.jar",
+      "hash": "sha256-RUi3SoFe1E9UgMpPBiBKiwCAncfl9qglqe3xj0A3e2U="
     },
-    "spotbugs-annotations-4.8.3.module": {
-      "url": "https://repo.maven.apache.org/maven2/com/github/spotbugs/spotbugs-annotations/4.8.3/spotbugs-annotations-4.8.3.module",
-      "hash": "sha256-34AErxyV2jXIHHj70pYGMtwOzf5gE8kYyUT/i6AR/pk="
+    "spotbugs-annotations-4.8.6.module": {
+      "url": "https://repo.maven.apache.org/maven2/com/github/spotbugs/spotbugs-annotations/4.8.6/spotbugs-annotations-4.8.6.module",
+      "hash": "sha256-2ye9p0GFWoGc1Q6dYSMMQv4qoqZEuU1zMTwFIXrgUjk="
     },
-    "spotbugs-annotations-4.8.3.pom": {
-      "url": "https://repo.maven.apache.org/maven2/com/github/spotbugs/spotbugs-annotations/4.8.3/spotbugs-annotations-4.8.3.pom",
-      "hash": "sha256-dyIPJucu3C3l3THc24KLBMK/SEi9zOkxSQXZXyw4+30="
+    "spotbugs-annotations-4.8.6.pom": {
+      "url": "https://repo.maven.apache.org/maven2/com/github/spotbugs/spotbugs-annotations/4.8.6/spotbugs-annotations-4.8.6.pom",
+      "hash": "sha256-3U71+ubjJmCxUtecvHW8uuM0JWxX3ID8TfDhdhWZRWI="
     }
   },
   "com.google.code.findbugs:jsr305:3.0.2": {
@@ -1481,18 +1481,14 @@
       "hash": "sha256-hRxwRmgHgIuvvyiVwE3Px9Uq0IoP+eFLuwIVnT8Yg2U="
     }
   },
-  "org.mozilla:rhino:1.7.13": {
-    "rhino-1.7.13.jar": {
-      "url": "https://repo.maven.apache.org/maven2/org/mozilla/rhino/1.7.13/rhino-1.7.13.jar",
-      "hash": "sha256-kx3aM3idjgBP9bVHjuPW0iQwXeMwxIJm33w+SdUvxgY="
+  "org.mozilla:rhino:1.7.15": {
+    "rhino-1.7.15.jar": {
+      "url": "https://repo.maven.apache.org/maven2/org/mozilla/rhino/1.7.15/rhino-1.7.15.jar",
+      "hash": "sha256-JCf9y8FJygolzPu3xxsB85rUJwh3OkeBbNI0KGF2a2M="
     },
-    "rhino-1.7.13.module": {
-      "url": "https://repo.maven.apache.org/maven2/org/mozilla/rhino/1.7.13/rhino-1.7.13.module",
-      "hash": "sha256-dfUUBt5OtQi3YU3k8rRHRHVw0fY9vZDFnYdlXjaB4vI="
-    },
-    "rhino-1.7.13.pom": {
-      "url": "https://repo.maven.apache.org/maven2/org/mozilla/rhino/1.7.13/rhino-1.7.13.pom",
-      "hash": "sha256-Btt8NWAQL2KnGeKxTXUINgMTX+Ri85ExT2c62Qm3rkw="
+    "rhino-1.7.15.pom": {
+      "url": "https://repo.maven.apache.org/maven2/org/mozilla/rhino/1.7.15/rhino-1.7.15.pom",
+      "hash": "sha256-/FzJXslF11CfGzYyE5PVXs0eB15i/pk8hIvzHmE5Aw8="
     }
   },
   "org.ow2:ow2:1.5.1": {
