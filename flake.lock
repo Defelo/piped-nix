@@ -3,11 +3,11 @@
     "backend": {
       "flake": false,
       "locked": {
-        "lastModified": 1720714187,
-        "narHash": "sha256-GwdGNAlW8D1xyCpLc58UgEnvHiD1GAau7nK6iSj5FPY=",
+        "lastModified": 1721792407,
+        "narHash": "sha256-UEKd8QDnlu4ThFCMKRfWt2nvxwitxnLMLboPxLEJpm0=",
         "owner": "TeamPiped",
         "repo": "Piped-Backend",
-        "rev": "6380cea805d1bd95655e29a90321f09aeb3bb99a",
+        "rev": "01ec37d97134ebf2dde1093371ee9b12a87f2405",
         "type": "github"
       },
       "original": {
