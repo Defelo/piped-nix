@@ -139,46 +139,46 @@
       "hash": "sha256-qLqk1QoXus0KIkcczmbI290QF3qe4fJ69+y/qZ/bS9k="
     }
   },
-  "com.github.FireMasterK.NewPipeExtractor:NewPipeExtractor:ad90a5aa9c8daa323c02e6ffd800fc1f02dbe72e": {
-    "NewPipeExtractor-ad90a5aa9c8daa323c02e6ffd800fc1f02dbe72e.jar": {
-      "url": "https://jitpack.io/com/github/FireMasterK/NewPipeExtractor/NewPipeExtractor/ad90a5aa9c8daa323c02e6ffd800fc1f02dbe72e/NewPipeExtractor-ad90a5aa9c8daa323c02e6ffd800fc1f02dbe72e.jar",
-      "hash": "sha256-z+EqAyfmW1HmqW1HWMpUN7CNp3CRKhrk6o7iUIWijkM="
+  "com.github.FireMasterK.NewPipeExtractor:NewPipeExtractor:560bf78bb503646d710d8aaa4c5c619650e8f949": {
+    "NewPipeExtractor-560bf78bb503646d710d8aaa4c5c619650e8f949.jar": {
+      "url": "https://jitpack.io/com/github/FireMasterK/NewPipeExtractor/NewPipeExtractor/560bf78bb503646d710d8aaa4c5c619650e8f949/NewPipeExtractor-560bf78bb503646d710d8aaa4c5c619650e8f949.jar",
+      "hash": "sha256-6aDYmX6AEr/8Ppjj74uOuP2CNmKrduO8Rtrt+V9lw4k="
     },
-    "NewPipeExtractor-ad90a5aa9c8daa323c02e6ffd800fc1f02dbe72e.module": {
-      "url": "https://jitpack.io/com/github/FireMasterK/NewPipeExtractor/NewPipeExtractor/ad90a5aa9c8daa323c02e6ffd800fc1f02dbe72e/NewPipeExtractor-ad90a5aa9c8daa323c02e6ffd800fc1f02dbe72e.module",
-      "hash": "sha256-ntf5JGuqo5X8JkxBqB4W0395+MhD1rZ2BklVyOpXLCI="
+    "NewPipeExtractor-560bf78bb503646d710d8aaa4c5c619650e8f949.module": {
+      "url": "https://jitpack.io/com/github/FireMasterK/NewPipeExtractor/NewPipeExtractor/560bf78bb503646d710d8aaa4c5c619650e8f949/NewPipeExtractor-560bf78bb503646d710d8aaa4c5c619650e8f949.module",
+      "hash": "sha256-OpF330opeJ2gLJvxMKmkX3/RdzS5bxTiF0JiD74fxSE="
     },
-    "NewPipeExtractor-ad90a5aa9c8daa323c02e6ffd800fc1f02dbe72e.pom": {
-      "url": "https://jitpack.io/com/github/FireMasterK/NewPipeExtractor/NewPipeExtractor/ad90a5aa9c8daa323c02e6ffd800fc1f02dbe72e/NewPipeExtractor-ad90a5aa9c8daa323c02e6ffd800fc1f02dbe72e.pom",
-      "hash": "sha256-arOYQXBvKx7L44P8pOvk8/a7QGUHEpxau+MIq7T6bCA="
+    "NewPipeExtractor-560bf78bb503646d710d8aaa4c5c619650e8f949.pom": {
+      "url": "https://jitpack.io/com/github/FireMasterK/NewPipeExtractor/NewPipeExtractor/560bf78bb503646d710d8aaa4c5c619650e8f949/NewPipeExtractor-560bf78bb503646d710d8aaa4c5c619650e8f949.pom",
+      "hash": "sha256-+lBdUWdQ0FZ73G9LwqJd2k8/4kTaWTIQj7ytTyEkbxM="
     }
   },
-  "com.github.FireMasterK.NewPipeExtractor:extractor:ad90a5aa9c8daa323c02e6ffd800fc1f02dbe72e": {
-    "extractor-ad90a5aa9c8daa323c02e6ffd800fc1f02dbe72e.jar": {
-      "url": "https://jitpack.io/com/github/FireMasterK/NewPipeExtractor/extractor/ad90a5aa9c8daa323c02e6ffd800fc1f02dbe72e/extractor-ad90a5aa9c8daa323c02e6ffd800fc1f02dbe72e.jar",
-      "hash": "sha256-t/1qn6smgNyo58/ie1hAjBNVJaNcG22nZV35/xmJOqM="
+  "com.github.FireMasterK.NewPipeExtractor:extractor:560bf78bb503646d710d8aaa4c5c619650e8f949": {
+    "extractor-560bf78bb503646d710d8aaa4c5c619650e8f949.jar": {
+      "url": "https://jitpack.io/com/github/FireMasterK/NewPipeExtractor/extractor/560bf78bb503646d710d8aaa4c5c619650e8f949/extractor-560bf78bb503646d710d8aaa4c5c619650e8f949.jar",
+      "hash": "sha256-o9qNRMmEll0NNahARH2Uh+zgZPZik9XPt1pUhGbevg4="
     },
-    "extractor-ad90a5aa9c8daa323c02e6ffd800fc1f02dbe72e.module": {
-      "url": "https://jitpack.io/com/github/FireMasterK/NewPipeExtractor/extractor/ad90a5aa9c8daa323c02e6ffd800fc1f02dbe72e/extractor-ad90a5aa9c8daa323c02e6ffd800fc1f02dbe72e.module",
-      "hash": "sha256-yxhDyiRTzN1k7C8aq/9P8IUR6MYt3FVYIcqeKRnZFiE="
+    "extractor-560bf78bb503646d710d8aaa4c5c619650e8f949.module": {
+      "url": "https://jitpack.io/com/github/FireMasterK/NewPipeExtractor/extractor/560bf78bb503646d710d8aaa4c5c619650e8f949/extractor-560bf78bb503646d710d8aaa4c5c619650e8f949.module",
+      "hash": "sha256-rUvZ/tL3WTfmkx2u4D8tlwG/UO2lWbcnxTG0tuQbU/Q="
     },
-    "extractor-ad90a5aa9c8daa323c02e6ffd800fc1f02dbe72e.pom": {
-      "url": "https://jitpack.io/com/github/FireMasterK/NewPipeExtractor/extractor/ad90a5aa9c8daa323c02e6ffd800fc1f02dbe72e/extractor-ad90a5aa9c8daa323c02e6ffd800fc1f02dbe72e.pom",
-      "hash": "sha256-hrElQDr6pQYvLPByVH4l7gJ2ViOYLJNHUZnZY/Ky+nw="
+    "extractor-560bf78bb503646d710d8aaa4c5c619650e8f949.pom": {
+      "url": "https://jitpack.io/com/github/FireMasterK/NewPipeExtractor/extractor/560bf78bb503646d710d8aaa4c5c619650e8f949/extractor-560bf78bb503646d710d8aaa4c5c619650e8f949.pom",
+      "hash": "sha256-g/BkutntAfQqQ2BSSJKCOyadogd1ra3qJsQrCdbSM70="
     }
   },
-  "com.github.FireMasterK.NewPipeExtractor:timeago-parser:ad90a5aa9c8daa323c02e6ffd800fc1f02dbe72e": {
-    "timeago-parser-ad90a5aa9c8daa323c02e6ffd800fc1f02dbe72e.jar": {
-      "url": "https://jitpack.io/com/github/FireMasterK/NewPipeExtractor/timeago-parser/ad90a5aa9c8daa323c02e6ffd800fc1f02dbe72e/timeago-parser-ad90a5aa9c8daa323c02e6ffd800fc1f02dbe72e.jar",
-      "hash": "sha256-6Xg8kOK02cg3LpuvCcudF0iMr4ebMe/zxiYW5mLWm0I="
+  "com.github.FireMasterK.NewPipeExtractor:timeago-parser:560bf78bb503646d710d8aaa4c5c619650e8f949": {
+    "timeago-parser-560bf78bb503646d710d8aaa4c5c619650e8f949.jar": {
+      "url": "https://jitpack.io/com/github/FireMasterK/NewPipeExtractor/timeago-parser/560bf78bb503646d710d8aaa4c5c619650e8f949/timeago-parser-560bf78bb503646d710d8aaa4c5c619650e8f949.jar",
+      "hash": "sha256-pyQpZORQppwCwCfVbQWm8tkvTmwcZ0bR7FGy4dx45pU="
     },
-    "timeago-parser-ad90a5aa9c8daa323c02e6ffd800fc1f02dbe72e.module": {
-      "url": "https://jitpack.io/com/github/FireMasterK/NewPipeExtractor/timeago-parser/ad90a5aa9c8daa323c02e6ffd800fc1f02dbe72e/timeago-parser-ad90a5aa9c8daa323c02e6ffd800fc1f02dbe72e.module",
-      "hash": "sha256-srOqlHPqF3btczVwd5jozRpKGui+kSj6bTVCxrNzBe4="
+    "timeago-parser-560bf78bb503646d710d8aaa4c5c619650e8f949.module": {
+      "url": "https://jitpack.io/com/github/FireMasterK/NewPipeExtractor/timeago-parser/560bf78bb503646d710d8aaa4c5c619650e8f949/timeago-parser-560bf78bb503646d710d8aaa4c5c619650e8f949.module",
+      "hash": "sha256-ncj4+krlhq4jFTELO0cAiJCD6cSmRJc2eU6mtXyIrGs="
     },
-    "timeago-parser-ad90a5aa9c8daa323c02e6ffd800fc1f02dbe72e.pom": {
-      "url": "https://jitpack.io/com/github/FireMasterK/NewPipeExtractor/timeago-parser/ad90a5aa9c8daa323c02e6ffd800fc1f02dbe72e/timeago-parser-ad90a5aa9c8daa323c02e6ffd800fc1f02dbe72e.pom",
-      "hash": "sha256-7ohornxUcQCN9Ipx3V9HcdpaU3NdD9xW+qTHfSNCEOU="
+    "timeago-parser-560bf78bb503646d710d8aaa4c5c619650e8f949.pom": {
+      "url": "https://jitpack.io/com/github/FireMasterK/NewPipeExtractor/timeago-parser/560bf78bb503646d710d8aaa4c5c619650e8f949/timeago-parser-560bf78bb503646d710d8aaa4c5c619650e8f949.pom",
+      "hash": "sha256-KjtT32Acy9822J00NJJgHsYf77W3fPyujwMy0MbtdI4="
     }
   },
   "com.github.johnrengelman:shadow:8.1.1": {
