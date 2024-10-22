@@ -158,11 +158,11 @@
     "proxy": {
       "flake": false,
       "locked": {
-        "lastModified": 1729469543,
-        "narHash": "sha256-t8XKvNWYovNktcLitWepIbLZiZqEADAOgHOyt8aN5rk=",
+        "lastModified": 1729542352,
+        "narHash": "sha256-d8NKC9PHQHLFFDDQSpglf8H9g2N5IuhDZU2UZARLaSw=",
         "owner": "TeamPiped",
         "repo": "piped-proxy",
-        "rev": "35d3e66f9af71f939b9654c13592b360422342bc",
+        "rev": "855d78643521fda7e82bda4bba3f5a11181c911f",
         "type": "github"
       },
       "original": {
